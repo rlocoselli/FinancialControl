@@ -1,0 +1,8 @@
+﻿@model FinancialControl.Models.ChartModel
+
+@{ var chart = new Chart(600, 400,theme:ChartTheme.Vanilla);
+
+    chart.AddTitle(@FinancialControl.App_GlobalResources.st.ExpensesCategory);
+    chart.AddSeries(name: "Month", chartType: "Bar", xValue: Model.X, yValues: Model.Y);
+    chart.Write();
+}

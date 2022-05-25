@@ -1,0 +1,67 @@
+﻿@model IEnumerable<FinancialControl.Models.NettingClass>
+
+@{
+    ViewBag.Title = FinancialControl.App_GlobalResources.st.Reports;
+}
+
+<h2>@FinancialControl.App_GlobalResources.st.Netting</h2>
+
+@{ var grid = new WebGrid(source: Model, defaultSort: "Name", rowsPerPage: 10);}
+
+<p></p>
+
+<form>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4 class="muted">@FinancialControl.App_GlobalResources.st.Date</h4>
+                    <div class="input-group">
+                        <select id="year" name="year">
+                            @for (int i = DateTime.Now.Year; i >= DateTime.Now.Year - 10; i--)
+                            {
+                                if (Request["year"] == i.ToString())
+                                {
+                                    <option selected="selected" value="@i">@i.ToString("0000")</option>
+                                }
+                                else
+                                { 
+                                    <option value="@i">@i.ToString("0000")</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <p />
+                    <p></p>
+                    <div class="input-daterange input-group" id="datepicker">
+                        <input class="form-control" id="btnSubmit" type="submit" value="@FinancialControl.App_GlobalResources.st.Search" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<p></p>
+
+<div class="alert alert-info alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>@FinancialControl.App_GlobalResources.st.Netting @FinancialControl.App_GlobalResources.st.Total: </strong><mark>@ViewBag.Total</mark>
+</div>
+
+<div id="grid">
+  @grid.GetHtml(
+      tableStyle: "table table-striped",
+      headerStyle: "head",
+      alternatingRowStyle: "alt",
+      columns: grid.Columns(
+          grid.Column("Month", header: FinancialControl.App_GlobalResources.st.Month),
+          grid.Column("Year", header: FinancialControl.App_GlobalResources.st.Year),
+          grid.Column("Credit",format: (item) => String.Format("{0:c}",item.Credit), header: FinancialControl.App_GlobalResources.st.Credit),
+          grid.Column("Debt", format: (item) => String.Format("{0:c}", item.Debt), header: FinancialControl.App_GlobalResources.st.Debt),
+          grid.Column("Netting",header: FinancialControl.App_GlobalResources.st.NettingExpression, format: (item) => new MvcHtmlString((item.Netting < 0 ? "<b><font color='red'>" : "<b><font color='green'>") + String.Format("{0:c}", item.Netting) + "</font>" ))
+      )
+  )
+</div>
+
+

@@ -1,0 +1,27 @@
+﻿@model FinancialControl.Models.IndexViewModel
+@{
+    ViewBag.Title = FinancialControl.App_GlobalResources.st.Manage;
+}
+
+<h2>@ViewBag.Title.</h2>
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <h4>@FinancialControl.App_GlobalResources.st.Manage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Password:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink(FinancialControl.App_GlobalResources.st.ChangePassword, "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink(FinancialControl.App_GlobalResources.st.Create, "SetPassword")
+            }
+            ]
+        </dd>
+    </dl>
+</div>

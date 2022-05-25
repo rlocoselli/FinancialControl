@@ -1,0 +1,111 @@
+﻿@model IEnumerable<FinancialControl.Models.Entries>
+
+@{
+    ViewBag.Title = @FinancialControl.App_GlobalResources.st.Entries;
+}
+
+<style>
+	.scrolltab {
+		overflow-x: scroll;
+	}
+</style>
+
+<h2>@FinancialControl.App_GlobalResources.st.Entries</h2>
+
+<p>
+    @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Create, "Create")
+</p>
+
+<div class="alert alert-success">
+    <strong>@FinancialControl.App_GlobalResources.st.StartDate :</strong> @ViewBag.startDate <br />
+    <strong>@FinancialControl.App_GlobalResources.st.EndDate :</strong> @ViewBag.endDate <br />
+    <strong>@FinancialControl.App_GlobalResources.st.Category:</strong> @ViewBag.categoriaDesc <br />
+</div>
+
+@using (Html.BeginForm(null, null, FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <div class="row">
+            <div id="filter-panel" class="collapse filter-panel">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Filter</div>
+                        <div class="panel-body">
+                            <form class="form-inline" method="post" role="form">
+                                <div class="form-group">
+                                    <label class="filter-col" style="margin-right:0;" for="pref-perpage">@FinancialControl.App_GlobalResources.st.StartDate</label>
+                                    <input type="date" class="form-control input-sm" id="startDate" name="startDate" value="@ViewBag.startDate.ToString("yyyy-MM-ddT10:00:35Z")">
+                                </div>
+                                <div class="form-group">
+                                    <label class="filter-col" style="margin-right:0;" for="pref-perpage">@FinancialControl.App_GlobalResources.st.EndDate</label>
+                                    <input type="date" class="form-control input-sm" id="endDate" name="endDate">
+                                </div>
+                                <div class="form-group">
+                                    <label class="filter-col" style="margin-right:0;" for="pref-perpage">@FinancialControl.App_GlobalResources.st.Category</label>
+                                    @Html.DropDownList("categoria", (IEnumerable<SelectListItem>)ViewBag.ListCat, new { @class = "form-control" })
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default filter-col" style="margin-top:30px">
+                                        <span class="glyphicon glyphicon-search"></span> Search
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p></p>
+
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#filter-panel">
+        <span class="glyphicon glyphicon-cog"></span> @FinancialControl.App_GlobalResources.st.AdvancedSearch
+    </button>
+
+
+	var grid = new WebGrid(source: Model, defaultSort: "Name", rowsPerPage: 10);
+
+
+	var myHtml = grid.GetHtml(
+								htmlAttributes:new
+								{
+									id="grid"
+								},
+								tableStyle: "table table-striped table-responsive scrolltab",
+								headerStyle: "head",
+								alternatingRowStyle: "alt",
+								columns: grid.Columns(
+									grid.Column("dateMovement", header: FinancialControl.App_GlobalResources.st.Date, format: (item) => String.Format("{0:dd-MM-yy}", item.dateMovement)),
+									grid.Column("Category.type",  header: FinancialControl.App_GlobalResources.st.Type,style:"visibility:hidden"),
+									grid.Column("value", header: FinancialControl.App_GlobalResources.st.Value, format: (item) => String.Format("{0:C}", item.value)),
+									grid.Column("Category.categoryName", header: FinancialControl.App_GlobalResources.st.Category),
+									grid.Column("description", header: FinancialControl.App_GlobalResources.st.DescriptionField),
+									grid.Column(format: (item) => @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Delete, "Delete", new { id = item.id })),
+									grid.Column(format: (item) => @Html.ActionLink(FinancialControl.App_GlobalResources.st.Edit, "Edit", new { id = item.id }))
+		));
+
+	<div class="table-responsive">@myHtml</div>
+	<script type="text/javascript">
+		$(document).ready(
+
+			function () {
+				$('#grid td:nth-child(2),th:nth-child(2)').hide();
+
+				$("#grid > tbody > tr").each(
+					function () {
+						
+						if ($(this).children("td:nth-child(2)").text() == "C") {
+							$(this).children("td:nth-child(3)").css("color", "#33CC99");
+						}
+						else {
+							$(this).children("td:nth-child(3)").css("color", "red");	
+						}
+					}
+				);
+			}
+		);
+	</script>	
+}

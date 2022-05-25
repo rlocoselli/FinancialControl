@@ -1,0 +1,274 @@
+﻿@{ ViewBag.Title = "Financial Control"; }
+
+@{ var routeValuesDay = new RouteValueDictionary();
+                routeValuesDay.Add("startDate", DateTime.Now.Date);
+                routeValuesDay.Add("endDate", DateTime.Now.Date);
+
+                DateTime date = DateTime.Now.Date;
+
+                var first = new DateTime(date.Year, date.Month, 1);
+                var last = first.AddMonths(1).AddDays(-1);
+
+                var routeValuesMonth = new RouteValueDictionary();
+                routeValuesMonth.Add("startDate", first);
+                routeValuesMonth.Add("endDate", last); }
+
+<script type="module" src="https://cookieconsent.popupsmart.com/js/CookieConsent.js"></script>
+<script type="text/javascript" src="https://cookieconsent.popupsmart.com/js/App.js"></script>
+<script>
+    popupsmartCookieConsentPopup({
+        "siteName" : "Quick Financial Control" ,
+        "notice_banner_type": "bottom-dialog",
+        "consent_type": "gdpr",
+        "palette": "",
+        "language": "English",
+        "privacy_policy_url" : "/Terms" ,
+        "preferencesId" : "#" ,
+
+    });
+</script>
+
+<noscript>Cookie Consent by <a href="https://popupsmart.com/" rel="nofollow noopener">Popupsmart Website</a></noscript>
+
+@if (String.IsNullOrEmpty(User.Identity.Name))
+{
+<div class="jumbotron">
+    <h1>Financial Control</h1>
+    <p class="lead">@FinancialControl.App_GlobalResources.st.Description</p>
+    <p>@Html.ActionLink(FinancialControl.App_GlobalResources.st.RegisterHere, "Register", "Account", null, new { @class = "btn btn-primary btn-lg btn-block" })</p>
+    <p>@Html.ActionLink("Log in", "Login", "Account", null, new { @class = "btn btn-success btn-lg btn-block" })</p>
+</div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>@FinancialControl.App_GlobalResources.st.GettingStarted</h2>
+                        <p>
+                            @FinancialControl.App_GlobalResources.st.Itseasy
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div> }
+                            else
+                            {
+                <p>
+                    @if (ViewBag.NoCategories)
+                    {
+    <div class="alert alert-danger alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>@FinancialControl.App_GlobalResources.st.NoCategories</strong> @Html.ActionLink(FinancialControl.App_GlobalResources.st.Here, "Index", "Categories")
+    </div>}
+
+                    @if (ViewBag.NoEntries)
+                    {
+    <div class="alert alert-danger alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>@FinancialControl.App_GlobalResources.st.MessageEntry</strong> @Html.ActionLink(FinancialControl.App_GlobalResources.st.Here, "Index", "Entries")
+    </div>}
+
+                    @if (ViewBag.DueToday)
+                    {
+    <div class="alert alert-danger alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>@FinancialControl.App_GlobalResources.st.DueToday</strong>
+        <a href="@UrlHelper.GenerateUrl(null,"Index","Entries",routeValuesDay,RouteTable.Routes, HttpContext.Current.Request.RequestContext,false)">
+            @FinancialControl.App_GlobalResources.st.Here
+        </a>
+    </div>}
+                </p> <!-- /.row -->
+                                                <div class="row panel panel-info">
+                                                    <div class="panel-heading">@FinancialControl.App_GlobalResources.st.MonthlySummary</div>
+                                                    <div class="panel-body">
+                                                        <div class="col-lg-3 col-md-6">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-3">
+                                                                            <i class="fa fa-comments fa-5x"></i>
+                                                                        </div>
+                                                                        <div class="col-xs-9 text-right">
+                                                                            <div class="huge">@ViewBag.DayExpenses</div>
+                                                                            <div>@FinancialControl.App_GlobalResources.st.DayExpense</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="@UrlHelper.GenerateUrl(null,"Index","Entries",routeValuesDay,RouteTable.Routes, HttpContext.Current.Request.RequestContext,false)">
+                                                                    <div class="panel-footer">
+                                                                        <span class="pull-left">@FinancialControl.App_GlobalResources.st.ViewDetails</span>
+                                                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-3 col-md-6">
+                                                            <div class="panel panel-primary">
+                                                                <div class="panel-heading">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-3">
+                                                                            <i class="fa fa-comments fa-5x"></i>
+                                                                        </div>
+                                                                        <div class="col-xs-9 text-right">
+                                                                            <div class="huge">@ViewBag.Credit</div>
+                                                                            <div>@FinancialControl.App_GlobalResources.st.Credit</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="@UrlHelper.GenerateUrl(null,"Index","Entries",routeValuesMonth,RouteTable.Routes, HttpContext.Current.Request.RequestContext,false)">
+                                                                    <div class="panel-footer">
+                                                                        <span class="pull-left">@FinancialControl.App_GlobalResources.st.ViewDetails</span>
+                                                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-3 col-md-6">
+                                                            <div class="panel panel-warning">
+                                                                <div class="panel-heading">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-3">
+                                                                            <i class="fa fa-tasks fa-5x"></i>
+                                                                        </div>
+                                                                        <div class="col-xs-9 text-right">
+                                                                            <div class="huge">@ViewBag.Debit</div>
+                                                                            <div>@FinancialControl.App_GlobalResources.st.Debt</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="@UrlHelper.GenerateUrl(null,"Index","Entries",routeValuesMonth,RouteTable.Routes, HttpContext.Current.Request.RequestContext,false)">
+                                                                    <div class="panel-footer">
+                                                                        <span class="pull-left">@FinancialControl.App_GlobalResources.st.ViewDetails</span>
+                                                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-3 col-md-6">
+                                                            @{ var painel = "";
+
+                                                                                if (!((string)ViewBag.Netting).Contains("-"))
+                                                                                {
+                                                                                    painel = "panel panel-success";
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    painel = "panel panel-danger";
+                                                                                } }
+                                                            <div class="@painel">
+                                                                <div class="panel-heading">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-3">
+                                                                            <i class="fa fa-shopping-cart fa-5x"></i>
+                                                                        </div>
+                                                                        <div class="col-xs-9 text-right">
+                                                                            <div class="huge">@ViewBag.Netting</div>
+                                                                            <div>@FinancialControl.App_GlobalResources.st.Netting</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="@UrlHelper.GenerateUrl(null,"Index","Entries",routeValuesMonth,RouteTable.Routes, HttpContext.Current.Request.RequestContext,false)">
+                                                                    <div class="panel-footer">
+                                                                        <span class="pull-left">@FinancialControl.App_GlobalResources.st.ViewDetails</span>
+                                                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-3 col-md-6">
+                                                            <div class="panel panel-primary">
+                                                                <div class="panel-heading">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-3">
+                                                                            <i class="fa fa-tasks fa-5x"></i>
+                                                                        </div>
+                                                                        <div class="col-xs-9 text-right">
+                                                                            <div class="huge">@ViewBag.DayScheduled</div>
+                                                                            <div>@FinancialControl.App_GlobalResources.st.Maturing</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="@UrlHelper.GenerateUrl(null,"Index","Entries",routeValuesDay,RouteTable.Routes, HttpContext.Current.Request.RequestContext,false)">
+                                                                    <div class="panel-footer">
+                                                                        <span class="pull-left">@FinancialControl.App_GlobalResources.st.ViewDetails</span>
+                                                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-3 col-md-6">
+                                                            @{ var painel2 = "";
+
+                                                                                if (!((string)ViewBag.TotalOfTheYear).Contains("-"))
+                                                                                {
+                                                                                    painel2 = "panel panel-success";
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    painel2 = "panel panel-danger";
+                                                                                } }
+                                                            <div class="@painel2">
+                                                                <div class="panel-heading">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-3">
+                                                                            <i class="fa fa-tasks fa-5x"></i>
+                                                                        </div>
+                                                                        <div class="col-xs-9 text-right">
+                                                                            <div class="huge">@ViewBag.TotalOfTheYear</div>
+                                                                            <div>@FinancialControl.App_GlobalResources.st.TotalOfTheYear</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="@UrlHelper.GenerateUrl(null,"Index","Entries",routeValuesDay,RouteTable.Routes, HttpContext.Current.Request.RequestContext,false)">
+                                                                    <div class="panel-footer">
+                                                                        <span class="pull-left">@FinancialControl.App_GlobalResources.st.ViewDetails</span>
+                                                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-3 col-md-6">
+                                                            <div class="panel panel-warning">
+                                                                <div class="panel-heading">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-3">
+                                                                            <i class="fa fa-support fa-5x"></i>
+                                                                        </div>
+                                                                        <div class="col-xs-9 text-right">
+                                                                            <div class="huge">@Convert.ToInt32(ViewBag.Days + 1)</div>
+                                                                            <div>@FinancialControl.App_GlobalResources.st.DaysToMonth</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <a href="@UrlHelper.GenerateUrl(null,"Index","Entries",routeValuesMonth,RouteTable.Routes, HttpContext.Current.Request.RequestContext,false)">
+                                                                    <div class="panel-footer">
+                                                                        <span class="pull-left">@FinancialControl.App_GlobalResources.st.ViewDetails</span>
+                                                                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                                <p></p>
+
+                                                                                <div class="panel panel-default">
+                                                                                    <div class="panel-heading">@FinancialControl.App_GlobalResources.st.MonthyExpenses</div>
+                                                                                    <div class="panel-body">
+                                                                                        <img src="@UrlHelper.GenerateUrl(null,"ExpensesPerMonthChart","Charts",null,RouteTable.Routes, HttpContext.Current.Request.RequestContext,false)" class="img-responsive" style="width:100%" />
+                                                                                    </div>
+                                                                                </div>}

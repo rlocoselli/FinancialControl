@@ -1,0 +1,39 @@
+﻿@model IEnumerable<FinancialControl.Models.Category>
+
+@{
+    ViewBag.Title = @FinancialControl.App_GlobalResources.st.Category;
+}
+
+<h2>@FinancialControl.App_GlobalResources.st.Category</h2>
+
+<p>
+    @Html.ActionLink(FinancialControl.App_GlobalResources.st.Create, "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.categoryName)
+        </th>
+        <th>@Html.DisplayNameFor(model => model.type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.categoryName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Edit, "Edit", new { id=item.id }) |
+            @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Details, "Details", new { id=item.id }) |
+            @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Delete, "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

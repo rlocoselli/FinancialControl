@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = FinancialControl.App_GlobalResources.st.ExpensesCategory;
+}
+
+@{ using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <p></p>
+
+        <label>@FinancialControl.App_GlobalResources.st.Month / @FinancialControl.App_GlobalResources.st.Year</label>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h4 class="muted">@FinancialControl.App_GlobalResources.st.Date</h4>
+                        <div class="input-group">
+                            <select id="month">
+                                @for (int i = 1; i <= 12; i++)
+                                {
+                                    if (i != DateTime.Now.Month)
+                                    {
+                                        <option value="@i">@i.ToString("00")</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@i" selected>@i.ToString("00")</option>
+                                    }
+                                }
+                            </select> /
+                            <select id="year">
+                                @for (int i = DateTime.Now.Year; i >= DateTime.Now.Year - 10; i--)
+                                {
+                                    <option value="@i">@i.ToString("0000")</option>
+                                }
+                            </select>
+                        </div>
+                        <p />
+                        <p></p>
+                        <div class="input-daterange input-group" id="datepicker">
+                            <input class="form-control" id="btnSubmit" type="button" value="Search" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <img src="" id="imgChart" class="img-responsive" />
+            }
+            }
+
+            <script>
+                $("#btnSubmit").click(function () {
+
+                    var url = "ExpensesPerCatChart?month={0}&year={1}"
+
+                    url = url.replace("{0}",$("#month").val())
+                    url = url.replace("{1}", $("#year").val())
+
+                    $("#imgChart").attr("src", url);                    
+                });
+            </script>

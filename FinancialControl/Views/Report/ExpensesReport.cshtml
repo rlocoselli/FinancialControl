@@ -1,0 +1,81 @@
+﻿@model IEnumerable<FinancialControl.Models.ReportExpenses>
+
+@{
+    ViewBag.Title = FinancialControl.App_GlobalResources.st.Reports;
+}
+
+<h2>@FinancialControl.App_GlobalResources.st.MonthyExpenses</h2>
+
+<label>@FinancialControl.App_GlobalResources.st.Month / @FinancialControl.App_GlobalResources.st.Year</label>
+
+
+@using (Html.BeginForm(null,null, FormMethod.Get))
+{   
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4 class="muted">@FinancialControl.App_GlobalResources.st.Date</h4>
+                    <div class="input-group">
+                        <select id="month" name="month">
+                            @for (int i = 1; i <= 12; i++)
+                            {
+                                if (ViewBag.Month == i)
+                                {
+                                    <option value="@i" selected>@i.ToString("00")</option>
+                                }
+                                else
+                                {
+                                    if (i == DateTime.Now.Month && ViewBag.Month == null)
+                                    {
+                                        <option value="@i" selected>@i.ToString("00")</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@i">@i.ToString("00")</option>
+                                    }
+                                }
+                            }
+                        </select> /
+                        <select id="year" name="year">
+                            @for (int i = DateTime.Now.Year; i >= DateTime.Now.Year - 10; i--)
+                            {
+                                <option value="@i">@i.ToString("0000")</option>
+                            }
+                        </select>
+                    </div>
+                    <p />
+                    <p></p>
+                    <div class="input-daterange input-group" id="datepicker">
+                        <input class="form-control" id="btnSubmit" type="submit" value="Search" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    var grid = new WebGrid(source: Model, defaultSort: "Name", rowsPerPage: 10);
+
+    <div><strong>@FinancialControl.App_GlobalResources.st.TotalExpenses </strong><mark>@ViewBag.Total</mark></div>
+
+    <p></p>
+
+    <div id="grid">
+        @grid.GetHtml(
+          tableStyle: "table table-striped",
+          headerStyle: "head",
+          alternatingRowStyle: "alt",
+          columns: grid.Columns(
+          grid.Column("Category", header: FinancialControl.App_GlobalResources.st.Category),
+          grid.Column("Value", header: FinancialControl.App_GlobalResources.st.Value, format: (item) => String.Format("{0:c}", item.value)),
+          grid.Column("Average", header: FinancialControl.App_GlobalResources.st.Average, format: (item) => String.Format("{0:c}", item.average == null ? 0 : item.average)),
+          grid.Column("Percentage_Period", header: FinancialControl.App_GlobalResources.st.Percentage_Period, format: (item) => String.Format("{0:n}", item.percentage_period)),
+          grid.Column("", format: (item) => new MvcHtmlString(item.value < (item.average == null ? 0 : item.average) ? string.Format("<text><img width=\"30px\" height=\"30px\" src=\"{0}\" alt=\"Image\"/></text>", Url.Content("~/Content/Exclamation_mark_red.png")) : "")
+          )
+      )
+    )
+    </div>
+}

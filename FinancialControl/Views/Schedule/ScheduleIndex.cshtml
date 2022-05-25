@@ -1,0 +1,32 @@
+﻿@model IEnumerable<FinancialControl.Models.Schedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@FinancialControl.App_GlobalResources.st.Schedule</h2>
+
+<p>
+    @Html.ActionLink(FinancialControl.App_GlobalResources.st.Create, "ScheduleCreate")
+</p>
+
+@{
+    var grid = new WebGrid(source: Model, defaultSort: "Name", rowsPerPage: 10);
+}
+
+<div id="grid" class="table-responsive">
+    @grid.GetHtml(
+                                    tableStyle: "table table-striped",
+                                    headerStyle: "head",
+                                    alternatingRowStyle: "alt",
+                                    columns: grid.Columns(
+                                        grid.Column("Category.categoryName", header: FinancialControl.App_GlobalResources.st.Category),
+                                        grid.Column("description", header: FinancialControl.App_GlobalResources.st.DescriptionField),
+                                        grid.Column("value", header: FinancialControl.App_GlobalResources.st.Value, format: (item) => String.Format("{0:c}", item.value)),
+                                        grid.Column("total", header: FinancialControl.App_GlobalResources.st.Total, format: (item) => String.Format("{0:c}", item.total)),
+                                        grid.Column("start_movement", header: FinancialControl.App_GlobalResources.st.StartDate),
+                                        grid.Column("end_movement", header: FinancialControl.App_GlobalResources.st.EndDate),
+                                        grid.Column("quantity_installment", header: FinancialControl.App_GlobalResources.st.Quantity_installment),
+                                        grid.Column(format: (item) => @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Delete, "ScheduleEdit", new { id = item.id }))
+            ))
+</div>

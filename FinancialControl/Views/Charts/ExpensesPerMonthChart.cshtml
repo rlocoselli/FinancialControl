@@ -1,0 +1,8 @@
+﻿@model FinancialControl.Models.ChartModel
+
+@{ var chart = new Chart(600, 400);
+
+    chart.AddTitle(FinancialControl.App_GlobalResources.st.MontlyChart);
+    chart.AddSeries(name: FinancialControl.App_GlobalResources.st.Month, xValue: Model.X, yValues: Model.Y);
+    chart.Write();
+}

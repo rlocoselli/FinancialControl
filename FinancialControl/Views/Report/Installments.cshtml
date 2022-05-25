@@ -1,0 +1,25 @@
+﻿@model IEnumerable<FinancialControl.Models.InstallmentReport>
+
+@{
+    ViewBag.Title = FinancialControl.App_GlobalResources.st.InstallmentReport;
+}
+
+<h2>@FinancialControl.App_GlobalResources.st.InstallmentReport</h2>
+
+@{ var grid = new WebGrid(source: Model, defaultSort: "Name", rowsPerPage: 10);}
+
+<p></p>
+
+<div id="grid">
+  @grid.GetHtml(
+      tableStyle: "table table-striped",
+      headerStyle: "head",
+      alternatingRowStyle: "alt",
+      columns: grid.Columns(
+          grid.Column("mes", header: FinancialControl.App_GlobalResources.st.Month),
+          grid.Column("ano", header: FinancialControl.App_GlobalResources.st.Year),
+          grid.Column("amount",format: (item) => String.Format("{0:c}",item.Amount), header: FinancialControl.App_GlobalResources.st.Total)
+      )
+  )
+</div>
+

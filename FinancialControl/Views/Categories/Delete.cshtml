@@ -1,0 +1,32 @@
+﻿@model FinancialControl.Models.Category
+
+@{
+    ViewBag.Title = FinancialControl.App_GlobalResources.st.Delete;
+}
+
+<h2>@FinancialControl.App_GlobalResources.st.Delete</h2>
+
+<h3>@FinancialControl.App_GlobalResources.st.Deletemsg</h3>
+<div>
+    <h4>@FinancialControl.App_GlobalResources.st.Category</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.categoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.categoryName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="@FinancialControl.App_GlobalResources.st.Delete" class="btn btn-default" /> |
+            @Html.ActionLink(@FinancialControl.App_GlobalResources.st.BackToList, "Index")
+        </div>
+    }
+</div>
