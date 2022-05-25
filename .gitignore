@@ -3,4 +3,6 @@ bin/
 lib/
 obj/
 CodeGen/
+App_Data/
+packages/
 web.config
