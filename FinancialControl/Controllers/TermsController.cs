@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace FinancialControl.Controllers
 {
-	public class TermsController : Controller
+	public class TermsController : ControllerBase
 	{
 		// GET: Terms
 		public ActionResult Index()

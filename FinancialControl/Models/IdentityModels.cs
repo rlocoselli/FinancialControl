@@ -48,6 +48,8 @@ namespace FinancialControl.Models
         public System.Data.Entity.DbSet<FinancialControl.Models.Entries> Entries { get; set; }
 
         public System.Data.Entity.DbSet<FinancialControl.Models.Schedule> Schedule { get; set; }
+
+        public System.Data.Entity.DbSet<FinancialControl.Models.Account> Account { get; set; }
     }
 
 

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<FinancialControl.Models.Account>
+
+@{
+    ViewBag.Title = @FinancialControl.App_GlobalResources.st.Account;
+}
+
+<h2>@FinancialControl.App_GlobalResources.st.Account</h2>
+
+<p>
+    @Html.ActionLink(FinancialControl.App_GlobalResources.st.Create, "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.account_description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.account_description)
+        </td>
+        <td>
+            @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Edit, "Edit", new { id = item.account_id }) |
+            @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Details, "Details", new { id = item.account_id }) |
+            @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Delete, "Delete", new { id = item.account_id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -74,6 +74,7 @@ namespace FinancialControl
         public ActionResult Create()
         {
             ViewBag.ListCat = Categories.OrderBy(p => p.Text);
+            ViewBag.ListAccount = Accounts.OrderBy(p => p.Value);
 
             Entries model = new Entries();
 
@@ -85,6 +86,7 @@ namespace FinancialControl
         }
 
         private List<Category> _categories = null;
+        private List<Account> _accounts = null;
 
         public IEnumerable<SelectListItem> Categories
         {
@@ -96,13 +98,23 @@ namespace FinancialControl
         }
 
         // POST: Entries/Create
+        public IEnumerable<SelectListItem> Accounts
+        {
+            get
+            {
+                _accounts = db.Account.Where(p => p.user_mail == User.Identity.Name || p.account_id==1).ToList();
+                return new SelectList(_accounts, "account_id", "account_description");
+            }
+        }
+
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,category_id,description,value,user,dateMovement")] Entries entries)
+        public ActionResult Create([Bind(Include = "id,category_id,description,value,user,dateMovement, account_id")] Entries entries)
         {
             ViewBag.ListCat = Categories;
+            ViewBag.ListAccount = Accounts.OrderBy(p => p.Value);
 
             if (ModelState.IsValid)
             {
@@ -134,7 +146,7 @@ namespace FinancialControl
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,description,value,user,dateMovement,category_id")] Entries entries)
+        public ActionResult Edit([Bind(Include = "id,description,value,user,dateMovement,category_id, account_id")] Entries entries)
         {
             if (ModelState.IsValid)
             {

@@ -22,8 +22,15 @@ namespace FinancialControl.Models
         [Display(Name = "Category", ResourceType = typeof(App_GlobalResources.st))]
         public int category_id { get; set; }
 
+        [Required]
+        [Display(Name = "Account", ResourceType = typeof(App_GlobalResources.st))]
+        public int account_id { get; set; }
+
         [ForeignKey("category_id")]
         public virtual Category Category { get; set; }
+
+        [ForeignKey("account_id")]
+        public virtual Account Account { get; set; }
 
         [Required(ErrorMessageResourceName = "DescriptionRequired", ErrorMessageResourceType = typeof(App_GlobalResources.st))]
         [StringLength(30)]
@@ -47,4 +54,20 @@ namespace FinancialControl.Models
         [Display(Name = "User", ResourceType = typeof(App_GlobalResources.st))]
         public string user { get; set; }
     }
+    
+    [Table("account")]
+    public class Account
+    {
+        [Key]
+        [Display(Name = "Code", ResourceType = typeof(App_GlobalResources.st))]
+        public int account_id { get; set; }
+
+        [Required]
+        [Display(Name = "AccountDescription", ResourceType = typeof(App_GlobalResources.st))]
+        public String account_description { get; set; }
+
+        [Display(Name = "User", ResourceType = typeof(App_GlobalResources.st))]
+        public string user_mail { get; set; }
+    }
 }
+

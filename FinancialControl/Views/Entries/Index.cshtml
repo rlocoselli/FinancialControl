@@ -66,26 +66,27 @@
     </button>
 
 
-	var grid = new WebGrid(source: Model, defaultSort: "Name", rowsPerPage: 10);
+    var grid = new WebGrid(source: Model, defaultSort: "Name", rowsPerPage: 10);
 
 
-	var myHtml = grid.GetHtml(
-								htmlAttributes:new
-								{
-									id="grid"
-								},
-								tableStyle: "table table-striped table-responsive scrolltab",
-								headerStyle: "head",
-								alternatingRowStyle: "alt",
-								columns: grid.Columns(
-									grid.Column("dateMovement", header: FinancialControl.App_GlobalResources.st.Date, format: (item) => String.Format("{0:dd-MM-yy}", item.dateMovement)),
-									grid.Column("Category.type",  header: FinancialControl.App_GlobalResources.st.Type,style:"visibility:hidden"),
-									grid.Column("value", header: FinancialControl.App_GlobalResources.st.Value, format: (item) => String.Format("{0:C}", item.value)),
-									grid.Column("Category.categoryName", header: FinancialControl.App_GlobalResources.st.Category),
-									grid.Column("description", header: FinancialControl.App_GlobalResources.st.DescriptionField),
-									grid.Column(format: (item) => @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Delete, "Delete", new { id = item.id })),
-									grid.Column(format: (item) => @Html.ActionLink(FinancialControl.App_GlobalResources.st.Edit, "Edit", new { id = item.id }))
-		));
+    var myHtml = grid.GetHtml(
+                                htmlAttributes:new
+                                {
+                                    id="grid"
+                                },
+                                tableStyle: "table table-striped table-responsive scrolltab",
+                                headerStyle: "head",
+                                alternatingRowStyle: "alt",
+                                columns: grid.Columns(
+                                    grid.Column("dateMovement", header: FinancialControl.App_GlobalResources.st.Date, format: (item) => String.Format("{0:dd-MM-yy}", item.dateMovement)),
+                                    grid.Column("Category.type",  header: FinancialControl.App_GlobalResources.st.Type,style:"visibility:hidden"),
+                                    grid.Column("value", header: FinancialControl.App_GlobalResources.st.Value, format: (item) => String.Format("{0:C}", item.value)),
+                                    grid.Column("Category.categoryName", header: FinancialControl.App_GlobalResources.st.Category),
+                                    grid.Column("description", header: FinancialControl.App_GlobalResources.st.DescriptionField),
+                                    grid.Column("Account.account_description", header: FinancialControl.App_GlobalResources.st.Account),
+                                    grid.Column(format: (item) => @Html.ActionLink(@FinancialControl.App_GlobalResources.st.Delete, "Delete", new { id = item.id })),
+                                    grid.Column(format: (item) => @Html.ActionLink(FinancialControl.App_GlobalResources.st.Edit, "Edit", new { id = item.id }))
+        ));
 
 	<div class="table-responsive">@myHtml</div>
 	<script type="text/javascript">

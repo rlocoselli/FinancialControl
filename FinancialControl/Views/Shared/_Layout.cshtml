@@ -26,9 +26,15 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.Home, "Index", "Home")</li>
                     <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.Policy, "Index", "Terms")</li>
-                    <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.Category, "Index", "Categories")</li>
-                    <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.Entries, "Index", "Entries")</li>
-                    <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.Schedule, "ScheduleIndex", "Schedule")</li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">@FinancialControl.App_GlobalResources.st.Main <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.Category, "Index", "Categories")</li>
+                            <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.Account, "Index", "Accounts")</li>
+                            <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.Entries, "Index", "Entries")</li>
+                            <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.Schedule, "ScheduleIndex", "Schedule")</li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">@FinancialControl.App_GlobalResources.st.Reports <b class="caret"></b></a>
                         <ul class="dropdown-menu">

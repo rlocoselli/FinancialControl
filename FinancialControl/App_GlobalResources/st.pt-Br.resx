@@ -372,4 +372,13 @@
   <data name="PolicyAccept" xml:space="preserve">
     <value>Li e aceito as políticas de privacidade</value>
   </data>
+  <data name="Account" xml:space="preserve">
+    <value>Conta</value>
+  </data>
+  <data name="AccountDescription" xml:space="preserve">
+    <value>Descriçao da Conta</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>Principal</value>
+  </data>
 </root>
