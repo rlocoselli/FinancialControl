@@ -13,6 +13,13 @@ namespace FinancialControl.Models
         [Display(Name = "Code", ResourceType = typeof(App_GlobalResources.st))]
         public int id { get; set; }
 
+        [Required]
+        [Display(Name = "Account", ResourceType = typeof(App_GlobalResources.st))]
+        public int account_id { get; set; }
+
+        [ForeignKey("account_id")]
+        public virtual Account Account { get; set; }
+
         [Required(ErrorMessageResourceName = "CategoryRequired", ErrorMessageResourceType = typeof(App_GlobalResources.st))]
         [Display(Name = "Category", ResourceType = typeof(App_GlobalResources.st))]
         public int category_id { get; set; }

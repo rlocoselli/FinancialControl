@@ -44,7 +44,8 @@ namespace FinancialControl.Business
                         description = String.Format("{0} {1}-{2}", schedule.description, i + 1, qtdRecords),
                         value = schedule.value,
                         user = schedule.user,
-                        schedule_id = schedule.id
+                        schedule_id = schedule.id,
+                        account_id = schedule.account_id                  
                     };
 
                     list.Add(entry);

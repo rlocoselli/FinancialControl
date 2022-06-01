@@ -88,6 +88,15 @@ namespace FinancialControl.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à All Accounts.
+        /// </summary>
+        public static string All {
+            get {
+                return ResourceManager.GetString("All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Average.
         /// </summary>
         public static string Average {
@@ -790,7 +799,7 @@ namespace FinancialControl.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Balance of the year.
+        ///   Recherche une chaîne localisée semblable à Balance of the year (All accounts).
         /// </summary>
         public static string TotalOfTheYear {
             get {

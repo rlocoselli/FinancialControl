@@ -9,7 +9,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
-      <publishTime>05/25/2022 17:02:06</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>05/25/2022 17:02:45</publishTime>
@@ -18,7 +18,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2022 17:02:45</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
-      <publishTime>05/25/2022 17:02:06</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>05/25/2022 17:02:45</publishTime>
@@ -27,16 +27,22 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2022 17:02:45</publishTime>
     </File>
     <File Include="bin/es/FinancialControl.resources.dll">
-      <publishTime>05/25/2022 17:36:26</publishTime>
+      <publishTime>06/01/2022 15:25:22</publishTime>
     </File>
     <File Include="bin/Facebook.dll">
       <publishTime>05/25/2022 17:02:46</publishTime>
     </File>
     <File Include="bin/FinancialControl.dll">
-      <publishTime>05/25/2022 17:36:25</publishTime>
+      <publishTime>06/01/2022 15:25:22</publishTime>
     </File>
     <File Include="bin/FinancialControl.pdb">
-      <publishTime>05/25/2022 17:36:25</publishTime>
+      <publishTime>06/01/2022 15:25:22</publishTime>
+    </File>
+    <File Include="bin/fr/FinancialControl.resources.dll">
+      <publishTime>06/01/2022 15:25:22</publishTime>
+    </File>
+    <File Include="bin/fr/Microsoft.Data.Tools.Components.resources.dll">
+      <publishTime>07/24/2021 16:54:19</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>05/25/2022 17:02:47</publishTime>
@@ -70,6 +76,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/25/2022 17:02:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Tools.Components.dll">
+      <publishTime>07/24/2021 16:54:26</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
       <publishTime>05/25/2022 17:02:52</publishTime>
@@ -108,7 +117,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2022 17:02:55</publishTime>
     </File>
     <File Include="bin/pt-Br/FinancialControl.resources.dll">
-      <publishTime>05/25/2022 17:36:26</publishTime>
+      <publishTime>06/01/2022 15:25:22</publishTime>
     </File>
     <File Include="bin/pt-Br/System.Web.Helpers.resources.dll">
       <publishTime>05/25/2022 17:02:50</publishTime>
@@ -189,301 +198,319 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>05/25/2022 17:02:55</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>05/25/2022 17:02:07</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>05/25/2022 17:02:07</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Content/Exclamation_mark_red.png">
-      <publishTime>05/25/2022 17:02:07</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Content/financial.png">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>05/25/2022 17:02:07</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>05/25/2022 17:02:07</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>05/25/2022 17:02:15</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>05/25/2022 17:02:15</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>05/25/2022 17:02:15</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>05/25/2022 17:02:15</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>05/25/2022 17:02:07</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>05/25/2022 17:02:07</publishTime>
+      <publishTime>05/29/2022 16:12:18</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/dateFormat.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.min.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.min.map">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.date.extensions.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.date.extensions.min.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.extensions.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.extensions.min.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.min.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.numeric.extensions.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.numeric.extensions.min.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.phone.extensions.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.phone.extensions.min.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.regex.extensions.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/inputmask.regex.extensions.min.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/jquery.inputmask.bundle.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/jquery.inputmask.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.inputmask/jquery.inputmask.min.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.priceformat.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.priceformat.min.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.min.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/methods_pt.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/respond.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/respond.min.js">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/schedule.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>05/25/2022 17:02:08</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
+    </File>
+    <File Include="SQLScripts/inserts.sql">
+      <publishTime>05/29/2022 15:59:15</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginFailure.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/ForgotPassword.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/SendCode.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/VerifyCode.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
+    </File>
+    <File Include="Views/Accounts/Create.cshtml">
+      <publishTime>05/29/2022 19:42:23</publishTime>
+    </File>
+    <File Include="Views/Accounts/Delete.cshtml">
+      <publishTime>05/29/2022 16:46:10</publishTime>
+    </File>
+    <File Include="Views/Accounts/Details.cshtml">
+      <publishTime>05/29/2022 19:36:48</publishTime>
+    </File>
+    <File Include="Views/Accounts/Edit.cshtml">
+      <publishTime>05/29/2022 19:56:44</publishTime>
+    </File>
+    <File Include="Views/Accounts/Index.cshtml">
+      <publishTime>05/29/2022 19:56:59</publishTime>
     </File>
     <File Include="Views/Categories/Create.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Categories/Delete.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Categories/Details.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Categories/Edit.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Categories/Index.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Charts/ExpensesPerCat.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Charts/ExpensesPerCatChart.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Charts/ExpensesPerMonth.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Charts/ExpensesPerMonthChart.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Entries/Create.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/30/2022 08:47:07</publishTime>
     </File>
     <File Include="Views/Entries/Delete.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Entries/Details.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Entries/Edit.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/30/2022 08:41:12</publishTime>
     </File>
     <File Include="Views/Entries/Index.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/30/2022 08:45:00</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>05/25/2022 17:25:20</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Manage/Index.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Manage/ManageLogins.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Manage/SetPassword.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Report/Expenses.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Report/ExpensesReport.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Report/Installments.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Report/Netting.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Schedule/ScheduleCreate.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Schedule/ScheduleEdit.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Schedule/ScheduleEditForm.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>06/01/2022 14:08:07</publishTime>
     </File>
     <File Include="Views/Schedule/ScheduleIndex.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>06/01/2022 14:06:17</publishTime>
     </File>
     <File Include="Views/Shared/DisplayTemplates/Date.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Shared/DisplayTemplates/DateTime.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Shared/EditorTemplates/Date.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Shared/Lockout.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/25/2022 17:31:07</publishTime>
+      <publishTime>05/31/2022 20:47:21</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Views/Terms/Index.cshtml">
-      <publishTime>05/25/2022 17:02:10</publishTime>
+      <publishTime>05/29/2022 20:01:31</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>05/25/2022 17:02:09</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>05/25/2022 17:02:09</publishTime>
+      <publishTime>05/29/2022 15:45:20</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>05/25/2022 17:36:27</publishTime>
+      <publishTime>05/30/2022 08:52:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

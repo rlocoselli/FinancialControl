@@ -36,6 +36,15 @@
                         </ul>
                     </li>
                     <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">@ViewBag.AccountName <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            @foreach (var item in (List <FinancialControl.Models.Account>) ViewBag.Accounts)
+                            {
+                            <li><a href="@Url.Action("Index","Home")?accountIdContext=@item.account_id">@item.account_description</a></li>
+                            }
+                        </ul>
+                    </li>
+                    <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">@FinancialControl.App_GlobalResources.st.Reports <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink(FinancialControl.App_GlobalResources.st.ExpensesCategory, "ExpensesPerCat", "Charts")</li>

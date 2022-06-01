@@ -352,7 +352,7 @@
     <value>Coming due today</value>
   </data>
   <data name="TotalOfTheYear" xml:space="preserve">
-    <value>Balance of the year</value>
+    <value>Balance of the year (All accounts)</value>
   </data>
   <data name="DueToday" xml:space="preserve">
     <value>There are expenses coming due today.</value>
@@ -377,6 +377,9 @@
   </data>
   <data name="AccountDescription" xml:space="preserve">
     <value>Account Description</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All Accounts</value>
   </data>
   <data name="Main" xml:space="preserve">
     <value>Main</value>

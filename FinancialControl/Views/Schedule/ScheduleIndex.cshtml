@@ -20,6 +20,7 @@
                                     headerStyle: "head",
                                     alternatingRowStyle: "alt",
                                     columns: grid.Columns(
+                                        grid.Column("Account.account_description", header: FinancialControl.App_GlobalResources.st.AccountDescription),
                                         grid.Column("Category.categoryName", header: FinancialControl.App_GlobalResources.st.Category),
                                         grid.Column("description", header: FinancialControl.App_GlobalResources.st.DescriptionField),
                                         grid.Column("value", header: FinancialControl.App_GlobalResources.st.Value, format: (item) => String.Format("{0:c}", item.value)),

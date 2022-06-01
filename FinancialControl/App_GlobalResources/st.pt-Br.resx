@@ -352,7 +352,7 @@
     <value>Vencendo hoje</value>
   </data>
   <data name="TotalOfTheYear" xml:space="preserve">
-    <value>Saldo Anual</value>
+    <value>Saldo Anual (Todas as contas)</value>
   </data>
   <data name="DueToday" xml:space="preserve">
     <value>Há despesas vencendo hoje</value>
@@ -377,6 +377,9 @@
   </data>
   <data name="AccountDescription" xml:space="preserve">
     <value>Descriçao da Conta</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Todas as contas</value>
   </data>
   <data name="Main" xml:space="preserve">
     <value>Principal</value>

@@ -15,6 +15,7 @@ namespace FinancialControl
     public class ScheduleController : ControllerBase
     {
         private FinancialDbContext db = new FinancialDbContext();
+        private List<Account> _accounts = null;
 
         // GET: Schedule/ScheduleIndex
         public ActionResult ScheduleIndex()
@@ -28,6 +29,15 @@ namespace FinancialControl
                         select s;
 
             return View(query3.Distinct().ToList());
+        }
+
+        public IEnumerable<SelectListItem> Accounts
+        {
+            get
+            {
+                _accounts = db.Account.Where(p => p.user_mail == User.Identity.Name || p.account_id == 1).ToList();
+                return new SelectList(_accounts, "account_id", "account_description");
+            }
         }
 
         /*
@@ -56,6 +66,8 @@ namespace FinancialControl
             schedule.user = User.Identity.Name;
 
             ViewBag.category_id = new SelectList(db.CategoryModels.Where(a => a.user == User.Identity.Name).OrderBy(p=>p.categoryName).ToList(), "id", "categoryName");
+            ViewBag.ListAccount = Accounts.OrderBy(p => p.Value);
+
             return View(schedule);
         }
 
@@ -63,7 +75,7 @@ namespace FinancialControl
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ScheduleCreate([Bind(Include = "Category,id,category_id,description,value,total,start_movement,flg_installment,quantity_installment,user")] Schedule schedule)
+        public ActionResult ScheduleCreate([Bind(Include = "Category,id,category_id,description,value,total,start_movement,flg_installment,quantity_installment,user, account_id")] Schedule schedule)
         {
             if (ModelState.IsValid)
             {
@@ -93,6 +105,8 @@ namespace FinancialControl
             }
 
             ViewBag.category_id = new SelectList(db.CategoryModels.Where(a => a.user == User.Identity.Name).OrderBy(p => p.categoryName).ToList(), "id", "categoryName");
+            ViewBag.ListAccount = Accounts.OrderBy(p => p.Value);
+
             DisplayErrorMessage();
             return View(schedule);
         }
@@ -110,6 +124,7 @@ namespace FinancialControl
                 return HttpNotFound();
             }
             ViewBag.category_id = new SelectList(db.CategoryModels.Where(a => a.user == User.Identity.Name).OrderBy(p => p.categoryName).ToList(), "id", "categoryName");
+            ViewBag.ListAccount = Accounts.OrderBy(p => p.Value);
             return View(schedule);
         }
 
@@ -126,6 +141,8 @@ namespace FinancialControl
                 return RedirectToAction("ScheduleIndex");
             }
             ViewBag.category_id = new SelectList(db.CategoryModels.Where(a => a.user == User.Identity.Name).OrderBy(p => p.categoryName).ToList(), "id", "categoryName");
+            ViewBag.ListAccount = Accounts.OrderBy(p => p.Value);
+
             DisplayErrorMessage();
             return View(schedule);
         }

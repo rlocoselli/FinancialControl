@@ -13,6 +13,7 @@ namespace FinancialControl.Controllers
     public class HomeController : ControllerBase
     {
         private FinancialDbContext db = new FinancialDbContext();
+        List<FinancialControl.Models.Account> _accounts;
 
         private DateTime GetLastDayOfMonth(DateTime dateTime)
         {
@@ -25,14 +26,34 @@ namespace FinancialControl.Controllers
             {
                 if (User.Identity.Name != null)
                 {
-
+          
                     DateTime hoy = DateTime.Today;
 
-                    decimal? credit = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "C" && p.dateMovement.Month == DateTime.Now.Month && p.dateMovement.Year == DateTime.Now.Year).Sum(p => p.value);
-                    decimal? debt = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "D" && p.dateMovement.Month == DateTime.Now.Month && p.dateMovement.Year == DateTime.Now.Year).Sum(p => p.value);
-                    decimal? dayExpense = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "D" && System.Data.Entity.Core.Objects.EntityFunctions.TruncateTime(p.dateMovement) == hoy).Sum(p => p.value);
-                    decimal? dayScheduled = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "D" && System.Data.Entity.Core.Objects.EntityFunctions.TruncateTime(p.dateMovement) == hoy && p.schedule_id != null).Sum(p => p.value);
-                    int? countScheduled = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "D" && System.Data.Entity.Core.Objects.EntityFunctions.TruncateTime(p.dateMovement) == hoy && p.schedule_id != null).Count();
+                    decimal? credit = 0;
+                    decimal? debt = 0;
+                    decimal? dayExpense = 0;
+                    decimal? dayScheduled = 0;
+                    int? countScheduled = 0;
+
+                    int? accountId = (int?)Session["AccountId"];
+
+                    if (accountId == null)
+                    {
+                        credit = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "C" && p.dateMovement.Month == DateTime.Now.Month && p.dateMovement.Year == DateTime.Now.Year).Sum(p => p.value);
+                        debt = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "D" && p.dateMovement.Month == DateTime.Now.Month && p.dateMovement.Year == DateTime.Now.Year).Sum(p => p.value);
+                        dayExpense = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "D" && System.Data.Entity.Core.Objects.EntityFunctions.TruncateTime(p.dateMovement) == hoy).Sum(p => p.value);
+                        dayScheduled = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "D" && System.Data.Entity.Core.Objects.EntityFunctions.TruncateTime(p.dateMovement) == hoy && p.schedule_id != null).Sum(p => p.value);
+                        countScheduled = db.Entries.Where(p => p.user == User.Identity.Name && p.Category.type == "D" && System.Data.Entity.Core.Objects.EntityFunctions.TruncateTime(p.dateMovement) == hoy && p.schedule_id != null).Count();
+                    }
+                    else
+                    {
+                        credit = db.Entries.Where(p => p.account_id == accountId && p.user == User.Identity.Name && p.Category.type == "C" && p.dateMovement.Month == DateTime.Now.Month && p.dateMovement.Year == DateTime.Now.Year).Sum(p => p.value);
+                        debt = db.Entries.Where(p => p.account_id == accountId && p.user == User.Identity.Name && p.Category.type == "D" && p.dateMovement.Month == DateTime.Now.Month && p.dateMovement.Year == DateTime.Now.Year).Sum(p => p.value);
+                        dayExpense = db.Entries.Where(p => p.account_id == accountId && p.user == User.Identity.Name && p.Category.type == "D" && System.Data.Entity.Core.Objects.EntityFunctions.TruncateTime(p.dateMovement) == hoy).Sum(p => p.value);
+                        dayScheduled = db.Entries.Where(p => p.account_id == accountId && p.user == User.Identity.Name && p.Category.type == "D" && System.Data.Entity.Core.Objects.EntityFunctions.TruncateTime(p.dateMovement) == hoy && p.schedule_id != null).Sum(p => p.value);
+                        countScheduled = db.Entries.Where(p => p.account_id == accountId && p.user == User.Identity.Name && p.Category.type == "D" && System.Data.Entity.Core.Objects.EntityFunctions.TruncateTime(p.dateMovement) == hoy && p.schedule_id != null).Count();
+                    }
+
 
                     credit = credit == null ? 0 : credit;
                     debt = debt == null ? 0 : debt;

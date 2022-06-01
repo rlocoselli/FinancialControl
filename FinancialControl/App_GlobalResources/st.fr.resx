@@ -118,268 +118,268 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AdvancedSearch" xml:space="preserve">
-    <value>Búsqueda avanzada</value>
+    <value>Recherche</value>
   </data>
   <data name="Average" xml:space="preserve">
-    <value>Promedio</value>
+    <value>Moyenne</value>
   </data>
   <data name="BackToList" xml:space="preserve">
-    <value>Regresar a la pantalla precedente</value>
+    <value>Retour à la liste</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancelar</value>
+    <value>Annuler</value>
   </data>
   <data name="Category" xml:space="preserve">
-    <value>Categoría</value>
+    <value>Categorie</value>
   </data>
   <data name="Code" xml:space="preserve">
-    <value>Código</value>
+    <value>Code</value>
   </data>
   <data name="ConfirmPassword" xml:space="preserve">
-    <value>Confirmar contraseña</value>
+    <value>Confirmer le mot de passe</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Nuevo Registro</value>
+    <value>Nouveau</value>
   </data>
   <data name="CreateAccount" xml:space="preserve">
-    <value>Crear nueva cuenta</value>
+    <value>Nouveau compte</value>
   </data>
   <data name="Credit" xml:space="preserve">
-    <value>Ingreso</value>
+    <value>Entrée</value>
   </data>
   <data name="Date" xml:space="preserve">
-    <value>Fecha</value>
+    <value>Date</value>
   </data>
   <data name="DayExpense" xml:space="preserve">
-    <value>Gastos del Día</value>
+    <value>Dépenses du jour</value>
   </data>
   <data name="DaysToMonth" xml:space="preserve">
-    <value>Días para el fin del mes</value>
+    <value>Jours pour la fin du mois</value>
   </data>
   <data name="Debt" xml:space="preserve">
-    <value>Gasto</value>
+    <value>Sortie</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Borrar</value>
+    <value>Supprimer</value>
   </data>
   <data name="Deletemsg" xml:space="preserve">
-    <value>Seguro que quieres borrarlo?</value>
+    <value>Êtes-vous sûr de supprimer ?</value>
   </data>
   <data name="DeleteSchedule" xml:space="preserve">
-    <value>Todos los registros desde la fecha de hoy a lo que se refiere a esta programación seran excluidos. Deseas, de verdad, seguir con este procedimiento?</value>
+    <value>Tous les enregistrements de cette programmation à partir de cette date seront supprimés. Voulez-vous continuer ?</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Con Financial Control, tú puedes controlar eficientemente tus gastos y ingresos de manera fácil y rápida.</value>
+    <value>Financial Control est une plateforme pour vous aider à gerer vos finances.</value>
   </data>
   <data name="DescriptionField" xml:space="preserve">
-    <value>Descripción</value>
+    <value>Description</value>
   </data>
   <data name="Details" xml:space="preserve">
-    <value>Detalles</value>
+    <value>Détails</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Editar</value>
+    <value>éditer</value>
   </data>
   <data name="EndDate" xml:space="preserve">
-    <value>Fecha Final</value>
+    <value>Date de fin</value>
   </data>
   <data name="Entries" xml:space="preserve">
-    <value>Registrar Gastos y Ingresos</value>
+    <value>Enregistrements</value>
   </data>
   <data name="ExpensesCategory" xml:space="preserve">
-    <value>Top 5 - Gráfico por Categoría</value>
+    <value>Graphique par Categorie (Top 5)</value>
   </data>
   <data name="Flg_installment" xml:space="preserve">
-    <value>Cuotas?</value>
+    <value>Versement?</value>
   </data>
   <data name="GettingStarted" xml:space="preserve">
-    <value>Empieza ahora</value>
+    <value>Démarrage</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Accueil</value>
   </data>
   <data name="Itseasy" xml:space="preserve">
-    <value>Empieza ahora registrandote a través del enlace Regístrate ya</value>
+    <value>C'est très facile, tout que vous devez faire c'est d'enregistrer et commencer à utiliser l'application</value>
   </data>
   <data name="MessageSchedule" xml:space="preserve">
-    <value>Registros que no poseen cuotas definidas tendrán límite de 3 años</value>
+    <value>Enregistrements sans versment seront valides pendant une période de 3 ans</value>
   </data>
   <data name="Month" xml:space="preserve">
-    <value>Mes</value>
+    <value>Mois</value>
   </data>
   <data name="MonthyExpenses" xml:space="preserve">
-    <value>Gastos mensuales</value>
+    <value>Dépenses du mois</value>
   </data>
   <data name="MontlyChart" xml:space="preserve">
-    <value>Gráfico de Gastos mensuales</value>
+    <value>Graphique du mois</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Nome</value>
+    <value>Nom</value>
   </data>
   <data name="Netting" xml:space="preserve">
-    <value>Gastos x Ingresos</value>
+    <value>Rapport consolidé</value>
   </data>
   <data name="NettingExpression" xml:space="preserve">
-    <value>Saldo</value>
+    <value>Consolidation</value>
   </data>
   <data name="Password" xml:space="preserve">
-    <value>Contaseña</value>
+    <value>Mot de passe</value>
   </data>
   <data name="Percentage_Period" xml:space="preserve">
     <value>(%)</value>
   </data>
   <data name="Quantity_installment" xml:space="preserve">
-    <value>Número de Cuotas</value>
+    <value>Nombre de versements</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Registrar</value>
+    <value>Enregistrer</value>
   </data>
   <data name="RegisterHere" xml:space="preserve">
-    <value>Regístrate ya</value>
+    <value>Enregistrer ici</value>
   </data>
   <data name="RegisterMessage" xml:space="preserve">
-    <value>Utiliza tu cuenta para ingresar</value>
+    <value>Utilise votre compte pour faire login</value>
   </data>
   <data name="Remember" xml:space="preserve">
-    <value>Recordar</value>
+    <value>Rappelez-moi</value>
   </data>
   <data name="Reports" xml:space="preserve">
-    <value>Informes</value>
+    <value>Rapports</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Guardar</value>
+    <value>Sauvegarder</value>
   </data>
   <data name="Schedule" xml:space="preserve">
-    <value>Programar Gastos y Ingresos</value>
+    <value>Planifier versements</value>
   </data>
   <data name="StartDate" xml:space="preserve">
-    <value>Fecha de Inicio</value>
+    <value>Date Initiale</value>
   </data>
   <data name="TotalExpenses" xml:space="preserve">
-    <value>Total de gastos en el mes seleccionado es:</value>
+    <value>Total de dépenses</value>
   </data>
   <data name="Type" xml:space="preserve">
-    <value>Tipo</value>
+    <value>Type</value>
   </data>
   <data name="User" xml:space="preserve">
-    <value>Usuario</value>
+    <value>Utilisateur</value>
   </data>
   <data name="Value" xml:space="preserve">
-    <value>Valor</value>
+    <value>Valeur</value>
   </data>
   <data name="ViewDetails" xml:space="preserve">
-    <value>Ver Detalles</value>
+    <value>Vérifier les détails</value>
   </data>
   <data name="Year" xml:space="preserve">
-    <value>Año</value>
+    <value>Année</value>
   </data>
   <data name="CategoryRequired" xml:space="preserve">
-    <value>Categoría es requerida</value>
+    <value>Categorie est obligatoire</value>
   </data>
   <data name="ChangePassword" xml:space="preserve">
-    <value>Cambiar Contraseña</value>
+    <value>Changer le mot de passe</value>
   </data>
   <data name="DescriptionRequired" xml:space="preserve">
-    <value>Descripción es requerida</value>
+    <value>Description est obligatoire</value>
   </data>
   <data name="Filter" xml:space="preserve">
-    <value>Filtro</value>
+    <value>Filtre</value>
   </data>
   <data name="Hello" xml:space="preserve">
-    <value>Hola</value>
+    <value>Hello</value>
   </data>
   <data name="Manage" xml:space="preserve">
-    <value>Configuración de Usuario</value>
+    <value>Gérer l'utilisateur</value>
   </data>
   <data name="NewPassword" xml:space="preserve">
-    <value>Nueva contraseña</value>
+    <value>Nouveau mot de passe</value>
   </data>
   <data name="NoPasswordMatch" xml:space="preserve">
-    <value>La nueva contraseña no coincide con su confirmación</value>
+    <value>Nouveau mot de passe et confirmation ne correspondent pas</value>
   </data>
   <data name="NumericField" xml:space="preserve">
-    <value>Este campo debe ser numerico</value>
+    <value>Le champ doit être numerique</value>
   </data>
   <data name="OldPassword" xml:space="preserve">
-    <value>Contraseña Actual</value>
+    <value>Mot de passe actuel</value>
   </data>
   <data name="Search" xml:space="preserve">
-    <value>Buscar</value>
+    <value>Recherche</value>
   </data>
   <data name="ValueRequired" xml:space="preserve">
-    <value>Valor es requerido</value>
-  </data>
-  <data name="ForgotPassword" xml:space="preserve">
-    <value>Olvidó la contraseña?</value>
+    <value>Valeur est obligatoire</value>
   </data>
   <data name="ClickLog" xml:space="preserve">
-    <value>haz un clic aquí para ingresar</value>
+    <value>Clique ici</value>
   </data>
   <data name="EnterMail" xml:space="preserve">
-    <value>Ingrese su correo electrónico</value>
+    <value>Saissiez votre e-mail</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>J'ai oublié mon mot de passe</value>
   </data>
   <data name="MessageDisplayReset" xml:space="preserve">
-    <value>Por favor, verifique su correo para definir una nueva contraseña</value>
+    <value>Veuillez vérifier votre e-mail pour changer de votre mot de passe</value>
   </data>
   <data name="MessagePasswordReset" xml:space="preserve">
-    <value>Defina una nueva contraseña haciendo un clic en</value>
+    <value>Veuillez redefinir votre mot de passe</value>
   </data>
   <data name="PasswordHasBeenReset" xml:space="preserve">
-    <value>La contraseña ha sido definida. Por favor</value>
+    <value>Votre mot de passe a été rédefini</value>
   </data>
   <data name="ResetConfirmation" xml:space="preserve">
-    <value>Contraseña definida</value>
+    <value>Confirmation de rédefinition de mot de passe</value>
   </data>
   <data name="ResetPassword" xml:space="preserve">
-    <value>Definir nueva contraseña</value>
+    <value>Rédefinir mot de passe</value>
   </data>
   <data name="Here" xml:space="preserve">
-    <value>aquí</value>
+    <value>Ici</value>
   </data>
   <data name="NoCategories" xml:space="preserve">
-    <value>Usted no tiene categorías disponibles. Por favor, haga un clic en</value>
+    <value>Vous n'avez pas des categories enregistrés, cliquez ici</value>
   </data>
   <data name="SixCharacteres" xml:space="preserve">
-    <value>{0} debe tener por lo menos {2} caracteres.</value>
+    <value>Le champ {0} doit avoir au moin {2} charactères.</value>
   </data>
   <data name="InstallmentReport" xml:space="preserve">
-    <value>Informe de Cuotas</value>
+    <value>Rapport de Enregistrement</value>
   </data>
   <data name="Total" xml:space="preserve">
     <value>Total</value>
   </data>
   <data name="Maturing" xml:space="preserve">
-    <value>Vencimiento hoy</value>
+    <value>Expire aujourd'hui</value>
   </data>
   <data name="TotalOfTheYear" xml:space="preserve">
-    <value>Balance Anual (Todas las cuentas)</value>
+    <value>Balance de l'année (Tous les comptes)</value>
   </data>
   <data name="DueToday" xml:space="preserve">
-    <value>Hay despesas venciendo hoy</value>
+    <value>Il y a des dépenses ce jour-là</value>
   </data>
   <data name="MonthlySummary" xml:space="preserve">
-    <value>Resumen Mensal</value>
+    <value>Résumé du mois</value>
   </data>
   <data name="MessageEntry" xml:space="preserve">
-    <value>Usted no tiene entradas o salidas insertadas. Por favor, clic</value>
+    <value>Vous n'avez aucun enregistrement. Veuillez cliquer</value>
   </data>
   <data name="NeedAccept" xml:space="preserve">
-    <value>Usted necesita aceptar la política de privacidad</value>
+    <value>Vous devez accepter les politiques de confidencialité</value>
   </data>
   <data name="Policy" xml:space="preserve">
-    <value>Política de Privacidad</value>
+    <value>Politique de confidencialité</value>
   </data>
   <data name="PolicyAccept" xml:space="preserve">
-    <value>Leí y acepto las políticas de privacidad</value>
+    <value>J'ai lu e j'accepte la politique de confidencialité</value>
   </data>
   <data name="Account" xml:space="preserve">
-    <value>Cuenta</value>
+    <value>Compte</value>
   </data>
   <data name="AccountDescription" xml:space="preserve">
-    <value>Description de la cuenta</value>
+    <value>Description du compte</value>
   </data>
   <data name="All" xml:space="preserve">
-    <value>Todas las cuentas</value>
+    <value>Tous les comptes</value>
   </data>
   <data name="Main" xml:space="preserve">
     <value>Principal</value>
