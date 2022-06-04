@@ -31,6 +31,7 @@ namespace FinancialControl
                 string lang = requestContext.HttpContext.Request.UserLanguages[0];
                 CultureInfo ci = CultureInfo.GetCultureInfo(lang);
                 Thread.CurrentThread.CurrentUICulture = ci;
+                Thread.CurrentThread.CurrentCulture = ci;
             }
 
             ViewBag.Accounts = Accounts;
