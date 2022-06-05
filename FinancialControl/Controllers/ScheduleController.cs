@@ -22,6 +22,12 @@ namespace FinancialControl
         {
             IQueryable<Schedule> query = db.Schedule.Where(p=>p.user == User.Identity.Name);
 
+            if (Session["AccountId"] != null)
+            {
+                int account = (int)Session["AccountId"];
+                query = query.Where(p => p.account_id == account);
+            }
+
             IQueryable<Entries> query2 = db.Entries.Where(p => p.user == User.Identity.Name && p.dateMovement > DateTime.Now);
 
             var query3 = from s in query

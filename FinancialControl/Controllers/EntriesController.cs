@@ -42,16 +42,36 @@ namespace FinancialControl
             if (String.IsNullOrEmpty(categoria))
             {
                 ViewBag.categoriaDesc = String.Empty;
-                var entries = from a in db.Entries where a.user == User.Identity.Name && a.dateMovement >= startDate && a.dateMovement <= endDate orderby a.dateMovement descending select a;
-                return View(entries);
+
+                if (Session["AccountId"] == null)
+                {
+                    var entries = from a in db.Entries where a.user == User.Identity.Name && a.dateMovement >= startDate && a.dateMovement <= endDate orderby a.dateMovement descending select a;
+                    return View(entries);
+                }
+                else
+                {
+                    int account = (int)Session["AccountId"];
+                    var entries = from a in db.Entries where a.account_id == account && a.user == User.Identity.Name && a.dateMovement >= startDate && a.dateMovement <= endDate orderby a.dateMovement descending select a;
+                    return View(entries);
+                }
+
             }
             else
             {
                 ViewBag.categoriaDesc = _categories.FindLast(p => p.id == int.Parse(categoria)).categoryName;
                 int intCategoria = int.Parse(categoria);
 
-                var entries = from a in db.Entries where a.user == User.Identity.Name && a.dateMovement >= startDate && a.dateMovement <= endDate && a.category_id == intCategoria orderby a.dateMovement descending select a;
-                return View(entries);
+                if (Session["AccountId"] == null)
+                {
+                    var entries = from a in db.Entries where a.user == User.Identity.Name && a.dateMovement >= startDate && a.dateMovement <= endDate && a.category_id == intCategoria orderby a.dateMovement descending select a;
+                    return View(entries);
+                }
+                else
+                {
+                    int account = (int)Session["AccountId"];
+                    var entries = from a in db.Entries where a.account_id == account && a.user == User.Identity.Name && a.dateMovement >= startDate && a.dateMovement <= endDate && a.category_id == intCategoria orderby a.dateMovement descending select a;
+                    return View(entries);
+                }
             }
         }
 
